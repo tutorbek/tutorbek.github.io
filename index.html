@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charSet="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>tutorbek.com</title>
+    <meta name="description"
+          content="I build productivity apps (UstozShop, FolderifyLink, OdatAI and Postigram) and make content about building them."/>
+    <meta name="og:image" content="static/assets/images/bekzod-avvatar.jpg"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap"/>
+    <link rel="stylesheet" href="site.css"/>
+    <link rel="icon" type="image/png" href="/static/assets/images/icons/javaicon.png"/>
+    <style>
+        html { scroll-behavior: smooth; }
+        @media (max-width: 639px) {
+            .apps-container {
+                position: relative;
+                max-height: 170px;
+                overflow: hidden;
+                transition: max-height 0.4s ease;
+            }
+            .apps-container.expanded {
+                max-height: 800px;
+            }
+            .apps-container:not(.expanded)::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 35px;
+                background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+                pointer-events: none;
+                z-index: 90;
+            }
+            .apps-toggle-btn {
+                display: inline-flex;
+                align-items: center;
+                gap: 4px;
+                margin: 6px 0 10px;
+                padding: 4px 8px;
+                border: none;
+                background: transparent;
+                border-radius: 6px;
+                cursor: pointer;
+                font-family: 'Inter', -apple-system, sans-serif;
+                font-size: 13px;
+                font-weight: 400;
+                color: #9ca3af;
+                letter-spacing: 0.01em;
+                -webkit-tap-highlight-color: transparent;
+                transition: background 0.2s, color 0.2s;
+            }
+            .apps-toggle-btn:hover,
+            .apps-toggle-btn:active {
+                background: rgba(0,0,0,0.04);
+                color: #6b7280;
+            }
+        }
+        @media (min-width: 640px) {
+            .apps-toggle-btn { display: none !important; }
+        }
+    </style>
+</head>
+
+<body>
+<div class="flex flex-col bg-white pt-10 p-8 w-full items-center mt-0 sm:mt-20">
+    <div class="flex flex-row items-center justify-center w-full max-w-2xl gap-20">
+        <div class="flex flex-col items-start gap-6">
+            <div class="text-gray-800 text-2xl font-light flex flex-col items-start gap-4"><span
+                    class="mb-10 flex flex-col sm:flex-row items-start sm:items-center gap-2">Hi, my name is Bekzod.iam develeoper.
+                        <img src="static/assets/images/bekzod-avvatar.jpg" alt="Avatar"
+                             class="w-10 h-10 rounded-full"/></span>
+
+                <span class="inline-flex relative group items-start flex-col sm:flex-row sm:items-center gap-2">I build apps and profit
+
+                    <span class="apps-container flex flex-col gap-2 sm:inline-flex sm:flex-row sm:gap-1.5 relative group/apps w-full sm:w-auto" id="appsContainer">
+
+                        <a href="https://t.me/donatelloUzBot" target="_blank" rel="noopener noreferrer"
+                           class="relative group group/donatello flex items-center gap-3 px-3 py-2 rounded-xl border border-gray-200 shadow-sm sm:border-0 sm:shadow-none sm:p-0 sm:rounded-none sm:gap-0">
+                            <img src="static/assets/images/logodonatello.png" alt="Donatello"
+                                 class="w-8 h-8 sm:w-10 sm:h-10 sm:transform sm:-rotate-6 sm:group-hover:rotate-0 sm:group-hover:translate-x-0 sm:translate-x-2 transition-all duration-200 relative z-10 rounded-xl cursor-pointer sm:border sm:border-gray-200 sm:shadow-sm"/>
+                            <span class="text-sm text-gray-600 sm:hidden">Donatello - Cheap donation service</span>
+                            <span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-black text-white px-2.5 py-1 rounded-xl bg-opacity-80 text-xs opacity-0 sm:group-hover/donatello:opacity-100 transition-opacity whitespace-nowrap hidden sm:block">Donatello - Cheap donation service</span>
+                        </a>
+
+                        <a href="https://t.me/ustozshopbot" target="_blank" rel="noopener noreferrer"
+                           class="relative group group/ustozshop flex items-center gap-3 px-3 py-2 rounded-xl border border-gray-200 shadow-sm sm:border-0 sm:shadow-none sm:p-0 sm:rounded-none sm:gap-0">
+                            <img src="static/assets/images/ustozshop.png" alt="UstozShop"
+                                 class="w-8 h-8 sm:w-10 sm:h-10 sm:transform sm:rotate-3 sm:group-hover:rotate-0 sm:group-hover:translate-x-0 sm:translate-x-2 transition-all duration-200 relative z-20 rounded-xl cursor-pointer sm:border sm:border-gray-200 sm:shadow-sm"/>
+                            <span class="text-sm text-gray-600 sm:hidden">UstozShop - A better teacher shop</span>
+                            <span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-black text-white px-2.5 py-1 rounded-xl bg-opacity-80 text-xs opacity-0 sm:group-hover/ustozshop:opacity-100 transition-opacity whitespace-nowrap hidden sm:block">UstozShop - A better teacher shop</span>
+                        </a>
+
+                        <a href="https://t.me/folderifybot" target="_blank" rel="noopener noreferrer"
+                           class="relative group group/folderify flex items-center gap-3 px-3 py-2 rounded-xl border border-gray-200 shadow-sm sm:border-0 sm:shadow-none sm:p-0 sm:rounded-none sm:gap-0">
+                            <img src="static/assets/images/folderifylinklogo.png" alt="FolderifyLink"
+                                 class="w-8 h-8 sm:w-10 sm:h-10 sm:transform sm:-rotate-6 sm:group-hover:rotate-0 sm:group-hover:translate-x-0 sm:translate-x-2 transition-all duration-200 relative z-30 rounded-xl cursor-pointer sm:border sm:border-gray-200 sm:shadow-sm"/>
+                            <span class="text-sm text-gray-600 sm:hidden">FolderifyLink - A better bookmark app</span>
+                            <span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-black text-white px-2.5 py-1 rounded-xl bg-opacity-80 text-xs opacity-0 sm:group-hover/folderify:opacity-100 transition-opacity whitespace-nowrap hidden sm:block">FolderifyLink - A better bookmark app</span>
+                        </a>
+
+                        <a href="https://t.me/bozorlyBot" target="_blank" rel="noopener noreferrer"
+                           class="relative group group/bozorly flex items-center gap-3 px-3 py-2 rounded-xl border border-gray-200 shadow-sm sm:border-0 sm:shadow-none sm:p-0 sm:rounded-none sm:gap-0">
+                            <img src="static/assets/images/bozorlyLogo.png" alt="Bozorly"
+                                 class="w-8 h-8 sm:w-10 sm:h-10 sm:transform sm:rotate-6 sm:group-hover:rotate-0 sm:group-hover:translate-x-0 sm:translate-x-2 transition-all duration-200 relative z-40 rounded-xl cursor-pointer sm:border sm:border-gray-200 sm:shadow-sm"/>
+                            <span class="text-sm text-gray-600 sm:hidden">Bozorly – Remember Everything in Market</span>
+                            <span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-black text-white px-2.5 py-1 rounded-xl bg-opacity-80 text-xs opacity-0 sm:group-hover/bozorly:opacity-100 transition-opacity whitespace-nowrap hidden sm:block">Bozorly – Remember Everything in Market</span>
+                        </a>
+
+                        <a href="https://t.me/odataibot" target="_blank" rel="noopener noreferrer"
+                           class="relative group group/odatai flex items-center gap-3 px-3 py-2 rounded-xl border border-gray-200 shadow-sm sm:border-0 sm:shadow-none sm:p-0 sm:rounded-none sm:gap-0">
+                            <img src="static/assets/images/odatai.png" alt="OdatAI"
+                                 class="w-8 h-8 sm:w-10 sm:h-10 sm:transform sm:-rotate-6 sm:group-hover:rotate-0 sm:group-hover:translate-x-0 sm:translate-x-2 transition-all duration-200 relative z-50 rounded-xl cursor-pointer sm:border sm:border-gray-200 sm:shadow-sm"/>
+                            <span class="text-sm text-gray-600 sm:hidden">OdatAI - A better habit tracker app</span>
+                            <span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-black text-white px-2.5 py-1 rounded-xl bg-opacity-80 text-xs opacity-0 sm:group-hover/odatai:opacity-100 transition-opacity whitespace-nowrap hidden sm:block">OdatAI - A better habit tracker app</span>
+                        </a>
+
+                        <a href="https://t.me/asklifyBot" target="_blank" rel="noopener noreferrer"
+                           class="relative group group/asklify flex items-center gap-3 px-3 py-2 rounded-xl border border-gray-200 shadow-sm sm:border-0 sm:shadow-none sm:p-0 sm:rounded-none sm:gap-0">
+                            <img src="static/assets/images/asklifylogo.png" alt="AsklifyMe"
+                                 class="w-8 h-8 sm:w-10 sm:h-10 sm:transform sm:rotate-3 sm:group-hover:rotate-0 sm:group-hover:translate-x-0 sm:translate-x-2 transition-all duration-200 relative z-60 rounded-xl cursor-pointer sm:border sm:border-gray-200 sm:shadow-sm"/>
+                            <span class="text-sm text-gray-600 sm:hidden">AsklifyMe - Ask questions to professionals</span>
+                            <span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-black text-white px-2.5 py-1 rounded-xl bg-opacity-80 text-xs opacity-0 sm:group-hover/asklify:opacity-100 transition-opacity whitespace-nowrap hidden sm:block">AsklifyMe - Ask questions to professionals</span>
+                        </a>
+
+                        <a href="https://t.me/postigramMinibot" target="_blank" rel="noopener noreferrer"
+                           class="relative group group/postigram flex items-center gap-3 px-3 py-2 rounded-xl border border-gray-200 shadow-sm sm:border-0 sm:shadow-none sm:p-0 sm:rounded-none sm:gap-0">
+                            <img src="static/assets/images/postigramlogo2.png" alt="Postigram"
+                                 class="w-8 h-8 sm:w-10 sm:h-10 sm:transform sm:-rotate-6 sm:group-hover:rotate-0 sm:group-hover:translate-x-0 sm:translate-x-2 transition-all duration-200 relative z-70 rounded-xl cursor-pointer sm:border sm:border-gray-200 sm:shadow-sm"/>
+                            <span class="text-sm text-gray-600 sm:hidden">Postigram - Write accurate</span>
+                            <span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-black text-white px-2.5 py-1 rounded-xl bg-opacity-80 text-xs opacity-0 sm:group-hover/postigram:opacity-100 transition-opacity whitespace-nowrap hidden sm:block">Postigram - Write accurate</span>
+                        </a>
+
+                        <a href="https://t.me/epchilrobot" target="_blank" rel="noopener noreferrer"
+                           class="relative group group/epchil flex items-center gap-3 px-3 py-2 rounded-xl border border-gray-200 shadow-sm sm:border-0 sm:shadow-none sm:p-0 sm:rounded-none sm:gap-0">
+                            <img src="static/assets/images/epchilrobotlogo.png" alt="Epchilrobot"
+                                 class="w-8 h-8 sm:w-10 sm:h-10 sm:transform sm:rotate-6 sm:group-hover:rotate-0 sm:group-hover:translate-x-0 sm:translate-x-2 transition-all duration-200 relative z-80 rounded-xl cursor-pointer sm:border sm:border-gray-200 sm:shadow-sm"/>
+                            <span class="text-sm text-gray-600 sm:hidden">Epchilrobot - Your best assistant</span>
+                            <span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-black text-white px-2.5 py-1 rounded-xl bg-opacity-80 text-xs opacity-0 sm:group-hover/epchil:opacity-100 transition-opacity whitespace-nowrap hidden sm:block">Epchilrobot - Your best assistant</span>
+                        </a>
+
+                    </span>
+                    <button class="apps-toggle-btn" id="appsToggleBtn" onclick="toggleApps()">
+                        <span id="appsToggleText">View all my projects:) ↓</span>
+                    </button>
+                </span>
+
+                <span class="inline-flex relative group items-start flex-col sm:flex-row sm:items-center gap-2"><span>and
+                            make YouTube videos about building/coding</span>
+                    <a href="https://youtube.com/@tutorbek" target="_blank" rel="noopener noreferrer"
+                       class="relative group flex items-center gap-3 px-3 py-2 rounded-xl border border-gray-200 shadow-sm sm:border-0 sm:shadow-none sm:p-0 sm:rounded-none sm:gap-0">
+                        <img src="https://cdn2.iconfinder.com/data/icons/2018-social-media-app-logos/1000/2018_social_media_popular_app_logo_youtube-512.png"
+                             alt="YouTube"
+                             class="w-8 h-8 sm:w-10 sm:h-10 inline-block align-middle rounded-xl cursor-pointer sm:rotate-6 sm:hover:rotate-0 transition-all duration-200"/>
+                        <span class="text-sm text-gray-600 sm:hidden">youtube.com/@tutorbek</span>
+                        <span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-black text-white px-2.5 py-1 rounded-xl bg-opacity-80 text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap hidden sm:block">@tutorbek</span>
+                    </a>
+                </span>
+                <span
+                        class="inline-flex relative group items-start flex-col sm:flex-row sm:items-center gap-2"><span>If
+                            you are interested in the articles I write</span>
+                    <a href="./blog/index.html" rel="noopener noreferrer"
+                       class="flex items-center gap-3 px-3 py-2 rounded-xl border border-gray-200 shadow-sm sm:border-0 sm:shadow-none sm:p-0 sm:rounded-none sm:gap-0 text-blue-600 hover:text-purple-600 transition-colors">
+                        <span class="sm:hidden" style="display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0f172a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                        </span>
+                        <span class="text-sm sm:hidden">tutorbek.com/blog</span>
+                        <span class="hidden sm:inline">blogs</span>
+                    </a>
+                </span>
+                <span
+                        class="inline-flex relative group items-start flex-col sm:flex-row sm:items-center gap-2 mt-10"><span>I
+                            also post regularly on these platforms</span>
+                    <span class="flex flex-col gap-2 sm:inline-flex sm:flex-row sm:gap-1.5 relative group/socialmedia w-full sm:w-auto">
+
+                        <a href="https://twitter.com/tutorbek" target="_blank" rel="noopener noreferrer"
+                           class="relative group group/twitter flex items-center gap-3 px-3 py-2 rounded-xl border border-gray-200 shadow-sm sm:border-0 sm:shadow-none sm:p-0 sm:rounded-none sm:gap-0">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/X_logo.jpg/1200px-X_logo.jpg"
+                                 alt="Twitter"
+                                 class="w-8 h-8 sm:w-10 sm:h-10 sm:transform sm:-rotate-6 sm:group-hover:rotate-0 sm:group-hover:translate-x-0 sm:translate-x-2 transition-all duration-200 relative z-10 rounded-xl cursor-pointer"/>
+                            <span class="text-sm text-gray-600 sm:hidden">x.com/tutorbek</span>
+                            <span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-black text-white px-2.5 py-1 rounded-xl bg-opacity-80 text-xs opacity-0 sm:group-hover/twitter:opacity-100 transition-opacity whitespace-nowrap hidden sm:block">@tutorbek</span>
+                        </a>
+
+                        <a href="https://instagram.com/tutorbek" target="_blank" rel="noopener noreferrer"
+                           class="relative group group/instagram flex items-center gap-3 px-3 py-2 rounded-xl border border-gray-200 shadow-sm sm:border-0 sm:shadow-none sm:p-0 sm:rounded-none sm:gap-0">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg"
+                                 alt="Instagram"
+                                 class="w-8 h-8 sm:w-10 sm:h-10 sm:transform sm:rotate-3 sm:group-hover:rotate-0 sm:group-hover:translate-x-0 sm:translate-x-2 transition-all duration-200 relative z-20 rounded-xl cursor-pointer"/>
+                            <span class="text-sm text-gray-600 sm:hidden">instagram.com/tutorbek</span>
+                            <span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-black text-white px-2.5 py-1 rounded-xl bg-opacity-80 text-xs opacity-0 sm:group-hover/instagram:opacity-100 transition-opacity whitespace-nowrap hidden sm:block">@tutorbek</span>
+                        </a>
+
+                        <a href="https://t.me/tutorbek" target="_blank" rel="noopener noreferrer"
+                           class="relative group group/telegram flex items-center gap-3 px-3 py-2 rounded-xl border border-gray-200 shadow-sm sm:border-0 sm:shadow-none sm:p-0 sm:rounded-none sm:gap-0">
+                            <img src="static/assets/images/icons/telegram.svg"
+                                 alt="Telegram"
+                                 class="w-8 h-8 sm:w-10 sm:h-10 sm:transform sm:-rotate-6 sm:group-hover:rotate-0 sm:group-hover:translate-x-0 sm:translate-x-2 transition-all duration-200 relative z-30 rounded-xl cursor-pointer"/>
+                            <span class="text-sm text-gray-600 sm:hidden">t.me/tutorbek</span>
+                            <span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-black text-white px-2.5 py-1 rounded-xl bg-opacity-80 text-xs opacity-0 sm:group-hover/telegram:opacity-100 transition-opacity whitespace-nowrap hidden sm:block">@tutorbek</span>
+                        </a>
+
+                        <a href="https://www.tiktok.com/@tutorbek" target="_blank" rel="noopener noreferrer"
+                           class="relative group group/tiktok flex items-center gap-3 px-3 py-2 rounded-xl border border-gray-200 shadow-sm sm:border-0 sm:shadow-none sm:p-0 sm:rounded-none sm:gap-0">
+                            <img src="https://thumbs.dreamstime.com/b/tiktok-social-media-app-icon-tiktok-social-media-app-icon-square-shape-vector-illustration-269930887.jpg"
+                                 alt="TikTok"
+                                 class="w-8 h-8 sm:w-10 sm:h-10 sm:transform sm:rotate-6 sm:group-hover:rotate-0 sm:group-hover:translate-x-0 sm:translate-x-2 transition-all duration-200 relative z-40 rounded-xl cursor-pointer"/>
+                            <span class="text-sm text-gray-600 sm:hidden">tiktok.com/@tutorbek</span>
+                            <span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-black text-white px-2.5 py-1 rounded-xl bg-opacity-80 text-xs opacity-0 sm:group-hover/tiktok:opacity-100 transition-opacity whitespace-nowrap hidden sm:block">@tutorbek</span>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/tutorbek" target="_blank" rel="noopener noreferrer"
+                           class="relative group group/linkedin flex items-center gap-3 px-3 py-2 rounded-xl border border-gray-200 shadow-sm sm:border-0 sm:shadow-none sm:p-0 sm:rounded-none sm:gap-0">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRokEYt0yyh6uNDKL8uksVLlhZ35laKNQgZ9g&amp;s"
+                                 alt="LinkedIn"
+                                 class="w-8 h-8 sm:w-10 sm:h-10 sm:transform sm:-rotate-6 sm:group-hover:rotate-0 sm:group-hover:translate-x-0 sm:translate-x-2 transition-all duration-200 relative z-50 rounded-xl cursor-pointer"/>
+                            <span class="text-sm text-gray-600 sm:hidden">linkedin.com/in/tutorbek</span>
+                            <span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-black text-white px-2.5 py-1 rounded-xl bg-opacity-80 text-xs opacity-0 sm:group-hover/linkedin:opacity-100 transition-opacity whitespace-nowrap hidden sm:block">@tutorbek</span>
+                        </a>
+
+                    </span>
+                </span><span
+                        class="inline-flex relative group items-start flex-col sm:flex-row sm:items-center gap-2 mt-8"><span>Curious
+                            about my tech stack?
+                            <a href="tools.html" rel="noopener noreferrer"
+                               class="text-blue-600 hover:text-purple-600 transition-colors">Click
+                                here.</a></span></span>
+                <div class="w-full flex items-center justify-center my-4 relative">
+                    <img src="static/assets/images/icons/animegirlicon.png" alt="" class="w-16 h-16 relative z-10"/>
+                </div>
+
+                <span class="inline-flex flex-col relative group items-center gap-2 text-lg w-full">
+                        <span>:)Want to donate my coffee?</span>
+                        <span class="flex flex-row items-center gap-2">
+                            <a href="https://tirikchilik.uz/tutorbek" target="_blank" rel="noopener noreferrer"
+                               class="flex items-center gap-2 px-3 py-2 rounded-xl border border-gray-200 shadow-sm text-blue-600 hover:text-purple-600 transition-colors">
+                                <span class="text-lg">☕</span>
+                                <span class="text-sm">Thanks brodar🫡</span>
+                            </a>
+                            <a href="https://t.me/bkzd19" target="_blank" rel="noopener noreferrer"
+                               class="flex items-center gap-2 px-3 py-2 rounded-xl border border-gray-200 shadow-sm text-blue-600 hover:text-purple-600 transition-colors">
+                                <span class="text-lg">💬</span>
+                                <span class="text-sm">Want to say hi? 👋</span>
+                            </a>
+                        </span>
+                        <span class="mt-2">If you are me <a href="/login" rel="noopener noreferrer"
+                                               class="text-blue-600 hover:text-purple-600 transition-colors">login</a>:)</span>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function toggleApps() {
+    const container = document.getElementById('appsContainer');
+    const btn = document.getElementById('appsToggleBtn');
+    const text = document.getElementById('appsToggleText');
+    const isExpanded = container.classList.toggle('expanded');
+    btn.classList.toggle('expanded', isExpanded);
+    text.textContent = isExpanded ? 'View all my projects:( ↑' : 'View all my projects:) ↓';
+}
+</script>
+</body>
+
+</html>
